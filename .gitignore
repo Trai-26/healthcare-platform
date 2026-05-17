@@ -1,5 +1,26 @@
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Virtual env
 venv/
+.venv/
+backend/.venv/
+
+# Logs
+logs/
+backend/logs/
+*.log
+
+# Database local
+*.db
+
+# Node
 node_modules/
+frontend/node_modules/
+
+# Env files
 .env
+.env.*
