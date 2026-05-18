@@ -7,24 +7,24 @@ import os
 from dotenv import load_dotenv
 import time
 
-from app.db.database import engine, Base
-from app.models.user import User
-from app.models.patient import Patient
-from app.models.provider import Provider
-from app.models.appointment import Appointment
-from app.models.medical_record import MedicalRecord
-from app.models.prescription import Prescription
-from app.models.department import Department
-from app.core.logging_config import setup_logging
+from .db.database import engine, Base
+from .models.user import User
+from .models.patient import Patient
+from .models.provider import Provider
+from .models.appointment import Appointment
+from .models.medical_record import MedicalRecord
+from .models.prescription import Prescription
+from .models.department import Department
+from .core.logging_config import setup_logging
 
-from app.api.users import router as users_router
-from app.api.auth import router as auth_router
-from app.api.profile import router as profile_router
-from app.api.patients import router as patients_router
-from app.api.providers import router as providers_router
-from app.api.appointments import router as appointments_router
-from app.api.medical_records import router as medical_records_router
-from app.api.prescriptions import router as prescriptions_router
+from .api.users import router as users_router
+from .api.auth import router as auth_router
+from .api.profile import router as profile_router
+from .api.patients import router as patients_router
+from .api.providers import router as providers_router
+from .api.appointments import router as appointments_router
+from .api.medical_records import router as medical_records_router
+from .api.prescriptions import router as prescriptions_router
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / ".env")
